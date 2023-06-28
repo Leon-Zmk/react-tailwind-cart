@@ -23,10 +23,11 @@ function App() {
 
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar giveItems={setItem} items={items}></Navbar>
       <Routes>
         <Route path='/' element={<Products products={items} />}></Route>
-        <Route path="/detail/:id" element={<Detail />}></Route>
+        <Route path="/detail/:id" element={<Detail  />}></Route>
+        <Route path='/search/:name'></Route>
       </Routes>
     </div>
   )
