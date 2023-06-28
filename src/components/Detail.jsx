@@ -3,7 +3,7 @@ import { useState , useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 function Detail() {
-   
+
     const {id}=useParams();
     const [item,setItem]=useState({})
 
@@ -15,7 +15,6 @@ function Detail() {
       const data= await fetch("https://fakestoreapi.com/products/"+id)
       const api= await data.json();
       setItem(api);
-      
     }
     
   return (
